@@ -1,0 +1,332 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled2.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyP6NQBcklKng5CXaeKdvqr/",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/alvas-education-foundation/brundaPD/blob/master/Day2%20session2\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_7sMSDqshDYY",
+        "colab_type": "text"
+      },
+      "source": [
+        "1.\tAdd rollno and marks {name:mark} for n number of students through keyboard in a dictionary and print the marks in descending order with respective name."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "yV4jR0rUhEX_",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 136
+        },
+        "outputId": "ff65a1e4-751c-40f1-c503-a93aeb34821b"
+      },
+      "source": [
+        "n=int(input(\"Enter no of records\"))\n",
+        "d={}\n",
+        "import operator\n",
+        "for i in range(1,n+1):\n",
+        "  name= input(\"Enter name %d\"%(i))\n",
+        "  mark=int(input(\"Enter mark %d\"%(i)))\n",
+        "  d[name]=mark\n",
+        "print(\"input: \",d)\n",
+        "sorted_a= sorted(d.items(), key=operator.itemgetter(1),reverse=True)\n",
+        "print(\"output: \",sorted_a)\n"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter no of records2\n",
+            "Enter name 1bru\n",
+            "Enter mark 199\n",
+            "Enter name 2poo\n",
+            "Enter mark 298\n",
+            "input:  {'bru': 99, 'poo': 98}\n",
+            "output:  [('bru', 99), ('poo', 98)]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "u6Pl2U0wh7ng",
+        "colab_type": "text"
+      },
+      "source": [
+        "2.\tAdd  name and salary {name:salary} for n number of employees through keyboard in a dictionary and print them in name alphabetical order with salary"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Adu4YEpuiBDA",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 136
+        },
+        "outputId": "72f31e31-ec95-4a90-b27f-3ee393b22687"
+      },
+      "source": [
+        "n=int(input(\"Enter no of records\"))\n",
+        "d={}\n",
+        "import operator\n",
+        "for i in range(1,n+1):\n",
+        "  name= input(\"Enter name %d\"%(i))\n",
+        "  s=float(input(\"Enter salary %d\"%(i)))\n",
+        "  d[name]=s\n",
+        "print(\"input: \",d)\n",
+        "sorted_a= sorted(d.items(), key=operator.itemgetter(0))\n",
+        "print(\"output: \",sorted_a)"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter no of records2\n",
+            "Enter name 1bru\n",
+            "Enter salary 15000\n",
+            "Enter name 2sneha\n",
+            "Enter salary 24000\n",
+            "input:  {'bru': 5000.0, 'sneha': 4000.0}\n",
+            "output:  [('bru', 5000.0), ('sneha', 4000.0)]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ds0zGYlFijSy",
+        "colab_type": "text"
+      },
+      "source": [
+        "3.\tAdd  name and salary {name:salary} for n number of employees through keyboard in a dictionary and print them in salary  ascending order and  sum, max, min and average of the salaries"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "PoWvIN4uimKu",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 204
+        },
+        "outputId": "548f69c5-7808-4966-9dcf-795b77a9e74e"
+      },
+      "source": [
+        "n=int(input(\"Enter no of records\"))\n",
+        "d={}\n",
+        "import operator\n",
+        "for i in range(1,n+1):\n",
+        "  name= input(\"Enter name %d\"%(i))\n",
+        "  s=float(input(\"Enter salary %d\"%(i)))\n",
+        "  d[name]=s\n",
+        "print(\"input: \",d)\n",
+        "sorted_a= sorted(d.items(), key=operator.itemgetter(1))\n",
+        "print(\"output: \",sorted_a)\n",
+        "v = d.values()\n",
+        "print(\"sum: \",sum(v))\n",
+        "print(\"max: \",max(v))\n",
+        "print(\"min: \",min(v))\n",
+        "print(\"avg: \",(sum(v)/n))poo\n"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter no of records2\n",
+            "Enter name 1brunda\n",
+            "Enter salary 1500\n",
+            "Enter name 2poo\n",
+            "Enter salary 2600\n",
+            "input:  {'brunda': 500.0, 'poo': 600.0}\n",
+            "output:  [('brunda', 500.0), ('poo', 600.0)]\n",
+            "sum:  1100.0\n",
+            "max:  600.0\n",
+            "min:  500.0\n",
+            "avg:  550.0\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "YLgFP-_ni9Uc",
+        "colab_type": "text"
+      },
+      "source": [
+        "4.\tAdd name and salary {name:salary} for n number of employees through keyboard in a dictionary and print only the employees whose salary is greater than 2000 but less than 4000\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "J6Hj8ay0jC2r",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 119
+        },
+        "outputId": "c63ecf2d-3f4f-4044-9369-8840407a1edd"
+      },
+      "source": [
+        "\n",
+        "n=int(input(\"Enter no of records\"))\n",
+        "d={}\n",
+        "import operator\n",
+        "for i in range(1,n+1):\n",
+        "  name= input(\"Enter name %d\"%(i))\n",
+        "  s=int(input(\"Enter salary %d\"%(i)))\n",
+        "  d[name]=s\n",
+        "print(\"input: \",d)\n",
+        "for key,value in d.items():\n",
+        "    if value>=2000 and value<=4000:\n",
+        "         print(d[key],\"=\",key)"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter no of records2\n",
+            "Enter name 1brunda\n",
+            "Enter salary 112000\n",
+            "Enter name 2sneha\n",
+            "Enter salary 223000\n",
+            "input:  {'brunda': 12000, 'sneha': 23000}\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-w8ULShbjbsG",
+        "colab_type": "text"
+      },
+      "source": [
+        "5.\tPython program to convert a 3 digit number  into words\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "P7T108L2jvAI",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 68
+        },
+        "outputId": "7a147c1f-e69d-4dbf-df9e-c2eb46d070bf"
+      },
+      "source": [
+        "def convert_to_words(num):  \n",
+        "    l = len(num);    \n",
+        "    if (l == 0): \n",
+        "        print(\"empty string\"); \n",
+        "        return; \n",
+        "  \n",
+        "    if (l > 4): \n",
+        "        print(\"Length more than 4 is not supported\"); \n",
+        "        return;   \n",
+        "    single_digits = [\"zero\", \"one\", \"two\", \"three\",  \n",
+        "                     \"four\", \"five\", \"six\", \"seven\",  \n",
+        "                     \"eight\", \"nine\"];  \n",
+        "    two_digits = [\"\", \"ten\", \"eleven\", \"twelve\",  \n",
+        "                  \"thirteen\", \"fourteen\", \"fifteen\",  \n",
+        "                  \"sixteen\", \"seventeen\", \"eighteen\", \n",
+        "                  \"nineteen\"];  \n",
+        "    tens_multiple = [\"\", \"\", \"twenty\", \"thirty\", \"forty\", \n",
+        "                     \"fifty\", \"sixty\", \"seventy\", \"eighty\",  \n",
+        "                     \"ninety\"]; \n",
+        "    tens_power = [\"hundred\", \"thousand\"];   \n",
+        "    print(num, \":\", end = \" \");   \n",
+        "    if (l == 1):  \n",
+        "        print(single_digits[ord(num[0]) - '0']); \n",
+        "        return;  \n",
+        "    x = 0; \n",
+        "    while (x < len(num)):    \n",
+        "        if (l >= 3): \n",
+        "            if (ord(num[x]) - 48 != 0): \n",
+        "                print(single_digits[ord(num[x]) - 48],  \n",
+        "                                           end = \" \"); \n",
+        "                print(tens_power[l - 3], end = \" \");  \n",
+        "                  \n",
+        "            l -= 1; \n",
+        "        else:   \n",
+        "            if (ord(num[x]) - 48 == 1):  \n",
+        "                sum = (ord(num[x]) - 48 + \n",
+        "                       ord(num[x]) - 48); \n",
+        "                print(two_digits[sum]); \n",
+        "                return;   \n",
+        "            elif (ord(num[x]) - 48 == 2 and \n",
+        "                  ord(num[x + 1]) - 48 == 0): \n",
+        "                print(\"twenty\"); \n",
+        "                return;  \n",
+        "            else: \n",
+        "                i = ord(num[x]) - 48; \n",
+        "                if(i > 0): \n",
+        "                    print(tens_multiple[i], end = \" \"); \n",
+        "                else: \n",
+        "                    print(\"\", end = \"\"); \n",
+        "                x += 1; \n",
+        "                if(ord(num[x]) - 48 != 0): \n",
+        "                    print(single_digits[ord(num[x]) - 48]); \n",
+        "        x += 1;  \n",
+        "convert_to_words(\"923\"); \n",
+        "convert_to_words(\"523\"); \n",
+        "convert_to_words(\"898\");"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "923 : nine hundred twenty three\n",
+            "523 : five hundred twenty three\n",
+            "898 : eight hundred ninety eight\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
